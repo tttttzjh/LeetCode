@@ -1,0 +1,19 @@
+class Solution:
+    # Hint 1
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        for i in range(len(nums)):
+            for j in range(len(nums)):
+                if i != j:
+                    if nums [i] + nums[j] ==target:
+                        return [i, j]
+        return []
+               
+    # Hint 2
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        for i in range(len(nums)):
+            x = nums[i]
+            y = target - x
+            for j in range(len(nums)):
+                if nums[j] == y and i != j:
+                    return[i, j]
+        return[] 
