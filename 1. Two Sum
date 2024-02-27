@@ -1,5 +1,5 @@
 class Solution:
-    # Hint 1
+    Hint 1
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         for i in range(len(nums)):
             for j in range(len(nums)):
@@ -17,3 +17,17 @@ class Solution:
                 if nums[j] == y and i != j:
                     return[i, j]
         return[] 
+
+    # Hint 3 # Only go through the list one time
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        numMap = {}
+        n = len(nums)
+
+        for i in range(n):
+            complement = target - nums[i]
+            if complement in numMap:  # in this dictionary, complement is the key, index is the value
+                return [numMap[complement], i] #
+            numMap[nums[i]] = i
+
+        return []  # No solution found
+
