@@ -1,4 +1,4 @@
 # LeetCode
-This repository contains my solutions to LeetCode Problem Set
+This repository contains both my and other's good solutions to LeetCode Problem Set
 
 Code beginner
