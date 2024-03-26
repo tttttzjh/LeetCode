@@ -25,7 +25,7 @@ class Solution:
 
         for i in range(n):
             complement = target - nums[i]
-            if complement in numMap:  # in this dictionary, complement is the key, index is the value
+            if complement in numMap:  # in this dictionary, value is the key, index is the value
                 return [numMap[complement], i] #
             numMap[nums[i]] = i
 
