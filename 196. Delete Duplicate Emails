@@ -1,0 +1,15 @@
+# Pandas:
+import pandas as pd
+
+def delete_duplicate_emails(person: pd.DataFrame) -> None:
+    person.sort_values(by='id', ascending=True, inplace=True)
+    person.drop_duplicates(subset=['email'], keep='first', inplace=True)
+
+
+# MYSQL:
+
+delete p1
+from Person as p1
+join Person as p2
+on p1.email = p2.email
+where p1.id > p2.id
